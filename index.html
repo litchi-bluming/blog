@@ -171,7 +171,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-12-02 20:52:12 / Modified: 20:52:24" itemprop="dateCreated datePublished" datetime="2021-12-02T20:52:12+08:00">2021-12-02</time>
+              <time title="Created: 2021-12-02 20:52:12 / Modified: 20:57:20" itemprop="dateCreated datePublished" datetime="2021-12-02T20:52:12+08:00">2021-12-02</time>
             </span>
 
           
@@ -185,33 +185,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>﻿# CINTA作业三</p>
-<blockquote>
+          <h1 id="CINTA作业三"><a href="#CINTA作业三" class="headerlink" title="CINTA作业三"></a>CINTA作业三</h1><blockquote>
 <p>1、实现求乘法逆元的函数，给定a和m，求a模m的乘法逆元，无解时请给出无解提示，并且只返回正整数。进而给出求解同余方程（ax = b mod m）的函数，即给定a，b，m，输出满足方程的x，无解给出无解提示。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">&gt;<span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function">&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (x &lt; y)<span class="built_in">swap</span>(x, y);</span><br><span class="line">   <span class="keyword">int</span> tem = <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">while</span> (y != <span class="number">0</span>)</span><br><span class="line">   &#123;</span><br><span class="line">       tem = x % y;</span><br><span class="line">       x = y;</span><br><span class="line">       y = tem;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> x;</span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">multiply_inverse</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> m)</span><span class="comment">//求乘法逆元</span></span></span><br><span class="line"><span class="function">&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (<span class="built_in">gcd</span>(a, m) != <span class="number">1</span>)</span><br><span class="line">   &#123;</span><br><span class="line">       cout &lt;&lt; <span class="string">&quot;无解&quot;</span> &lt;&lt; endl;</span><br><span class="line">       <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line">   <span class="keyword">while</span> ((a * x) % m != <span class="number">1</span>)x++;<span class="comment">//一一列举</span></span><br><span class="line">   <span class="keyword">return</span> x;</span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">tongyu</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> m)</span><span class="comment">//求同余方程最小正整数解</span></span></span><br><span class="line"><span class="function">&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> (<span class="built_in">gcd</span>(a, m) != <span class="number">1</span>)</span><br><span class="line">   &#123;</span><br><span class="line">       cout &lt;&lt; <span class="string">&quot;无解&quot;</span> &lt;&lt; endl;</span><br><span class="line">       <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">int</span> x = b * <span class="built_in">multiply_inverse</span>(a, m) % m;</span><br><span class="line">   <span class="keyword">return</span> x;</span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a,b,m;</span><br><span class="line">   cin&gt;&gt;a&gt;&gt;m;</span><br><span class="line">   cout&lt;&lt;<span class="built_in">multiply_inverse</span>(a,m);</span><br><span class="line">   cin&gt;&gt;b;</span><br><span class="line">   cout&lt;&lt;<span class="built_in">tongyu</span>(a,b,m);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<blockquote>
 <p>2、实现模指数运算的函数，给定x、y和m，求x的y次方模m。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">exp</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function">&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(b==<span class="number">0</span>)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">int</span> c=<span class="built_in">exp</span>(a,b/<span class="number">2</span>,m);</span><br><span class="line">   <span class="keyword">if</span>((b%<span class="number">2</span>)==<span class="number">0</span>)</span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">return</span> c*c%m;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">       <span class="keyword">return</span> a*c*c%m;</span><br><span class="line">   &#125;</span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function">&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">int</span> x,y,m;</span><br><span class="line">   cin&gt;&gt;x&gt;&gt;y&gt;&gt;m;</span><br><span class="line">   cout&lt;&lt;<span class="built_in">exp</span>(x,y,m);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<blockquote>
 <p>3、设p = 23和a = 5，使用费尔马小定理计算a^{2020} mod p?</p>
-<p>费尔马小定理：设P为素数，a为任意整数，a^(p-1)=1  (mod p)<br>$$<br>a^{2020} \bmod p= a^{22<em>19+18} \bmod p= a^{22</em>19}+a^{18}\bmod p<br>=a^{18}\bmod p=6<br>$$</p>
-</blockquote>
-<blockquote>
-<p>4、使用欧拉定理计算2^{100000} mod 55。</p>
+<p>费尔马小定理：设P为素数，a为任意整数，a^(p-1)=1  (mod p)</p>
+<script type="math/tex; mode=display">
+a^{2020} \bmod p= a^{22*19+18} \bmod p= a^{22*19}+a^{18}\bmod p
+=a^{18}\bmod p=6</script><p>4、使用欧拉定理计算2^{100000} mod 55。</p>
 <p><strong>gcd</strong>算法: 满足gcd(<em>i</em>,55)=1且小于55的<em>i</em>的个数，可得<em>ϕ</em>(55)=40</p>
-<p>由欧拉定理<br>$$<br>2^{ϕ(55)}≡1 \bmod55<br>$$</p>
-<p>$$<br>2^{40}≡1 \bmod p<br>$$</p>
-<p>因此可得：<br>$$<br>2^{10000}\mod 55\equiv 2^{40*2500}\bmod 55\equiv1<br>$$</p>
-</blockquote>
-<blockquote>
-<p>5、手动计算7^{1000}的最后两个数位等于什么？</p>
-<p>如题需求：<br>$$<br>7^{1000}\bmod 100<br>$$<br>由欧拉定理<br>$$<br>\phi(100)=40<br>$$<br>则：<br>$$<br>7^{40}\equiv1\bmod 100<br>$$<br>因此：<br>$$<br>7^{1000}\bmod 100\equiv7^{40}*7^{25}\bmod 100\equiv1<br>$$<br>​         则7^{1000}的最后两个数位是01.</p>
+<p>由欧拉定理 </p>
+<script type="math/tex; mode=display">
+2^{ϕ(55)}≡1 \bmod55</script><script type="math/tex; mode=display">
+2^{40}≡1 \bmod p</script><p>因此可得：</p>
+<script type="math/tex; mode=display">
+2^{10000}\mod 55\equiv 2^{40*2500}\bmod 55\equiv1</script><p>5、手动计算7^{1000}的最后两个数位等于什么？</p>
+<p>如题需求：</p>
+<script type="math/tex; mode=display">
+7^{1000}\bmod 100</script><p>由欧拉定理   </p>
+<script type="math/tex; mode=display">
+\phi(100)=40</script><p>则：</p>
+<script type="math/tex; mode=display">
+7^{40}\equiv1\bmod 100</script><p>因此：</p>
+<script type="math/tex; mode=display">
+7^{1000}\bmod 100\equiv7^{40}*7^{25}\bmod 100\equiv1</script><p>​         则7^{1000}的最后两个数位是01.</p>
 </blockquote>
 
       
@@ -379,6 +378,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
