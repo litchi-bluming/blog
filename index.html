@@ -146,6 +146,154 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lyhcq.gitee.io/blog/2021/12/12/CINTA-8-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="lycq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lycq's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2021/12/12/CINTA-8-1/" class="post-title-link" itemprop="url">CINTA_8</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-12-12 20:56:48" itemprop="dateCreated datePublished" datetime="2021-12-12T20:56:48+08:00">2021-12-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lyhcq.gitee.io/blog/2021/12/12/CINTA-8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="lycq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lycq's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2021/12/12/CINTA-8/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-12 20:56:13 / Modified: 20:56:22" itemprop="dateCreated datePublished" datetime="2021-12-12T20:56:13+08:00">2021-12-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="CINTA作业八"><a href="#CINTA作业八" class="headerlink" title="CINTA作业八"></a>CINTA作业八</h1><h2 id="1-手动计算-2000-2019-bmod-221"><a href="#1-手动计算-2000-2019-bmod-221" class="headerlink" title="1.手动计算 $2000^{2019}(\bmod 221)$"></a>1.手动计算 $2000^{2019}(\bmod 221)$</h2><p>$2000^{2019}=(2000\bmod 221)^{2019} \bmod 221=11^{2019}\bmod 221$</p>
+<p>设221=13$\times$17,而2000$\leftrightarrow$(11,11)</p>
+<p>由第一同构定理可知</p>
+<script type="math/tex; mode=display">
+(11,11)^{2019}=((11^{2019}\bmod 13),(11^{2019}\bmod 17))=((11^{12\times168+3}\bmod 13),(11^{16\times126+3}\bmod17))</script><p>根据费尔马小定理可得</p>
+<script type="math/tex; mode=display">
+(11,11)^{2019}=((11^3\bmod13),(11^3\bmod 17))=(5,5)</script><p>且 (5,5)$\leftrightarrow$5,则该式结果为5</p>
+<h2 id="2-运用CRT求解"><a href="#2-运用CRT求解" class="headerlink" title="2.运用CRT求解"></a>2.运用CRT求解</h2><script type="math/tex; mode=display">
+\begin{cases} x\equiv8\bmod11\\ x\equiv3\bmod19 \end{cases} \tag{1}</script><p>记 a=8, b=3, p=11, q=19 和 n=pq=209 ;</p>
+<p>使用egcd算法求解 $p^{-1}$ 和 $q^{-1}$  ,他们分别使得   $pp^{-1}\equiv1\pmod q $,   $qq^{-1}\equiv1\pmod p$ ;</p>
+<p>得到$p^{-1}=7\pmod{19}$   ,    $q^{-1}=7\pmod{11}$ ;</p>
+<p>令$y\equiv aqq^{-1}+bpp^{-1}\pmod n$</p>
+<p>则y=41;</p>
+<p>所以该式的解为4</p>
+<h2 id="3-运用CRT求解"><a href="#3-运用CRT求解" class="headerlink" title="3.运用CRT求解"></a>3.运用CRT求解</h2><script type="math/tex; mode=display">
+\begin{cases} x\equiv1\pmod 5\\ x\equiv2\pmod7\\ x\equiv3\pmod9\\x\equiv4\pmod{11}\end{cases}</script><p>令 $a_1=1,a_2=2,a_3=3,a_4=4,m_1=5,m_2=7,m_3=9,m_4=11$</p>
+<p>$M=m_1\times m_2\times m_3\times m_4=3465$</p>
+<p>$b<em>1=m_2\times m_3\times m_4=693$;  存在$b</em>{-1}=2$ 使得$bb_{-1}\equiv 1 \pmod {m_1}$</p>
+<p>$b_2=495$;  $b_2^{-1}\equiv 3\pmod 7$</p>
+<p>$b_3=385;b_3^{-1}\equiv 4\pmod 9$</p>
+<p>$b_4=315;b_4^{-1}\equiv 8\pmod {11}$</p>
+<p>则由中国剩余定理可得：</p>
+<p>$x=a_1b_1b_1^{-1}+a_2b_2b_2^{-1}+a_3b_3b_3^{-1}+a_4b_4b_4^{-1} \pmod {3456}=1731$</p>
+<h2 id="4-设m-n为互素的正整数，a-gt-0为一个正整数，如果"><a href="#4-设m-n为互素的正整数，a-gt-0为一个正整数，如果" class="headerlink" title="4.设m,n为互素的正整数，a&gt;0为一个正整数，如果"></a>4.设m,n为互素的正整数，a&gt;0为一个正整数，如果</h2><script type="math/tex; mode=display">
+x\equiv a\pmod m</script><script type="math/tex; mode=display">
+x\equiv a\pmod n</script><h2 id="x模mn等于什么，为什么？"><a href="#x模mn等于什么，为什么？" class="headerlink" title="x模mn等于什么，为什么？"></a>x模mn等于什么，为什么？</h2><p>由题目条件可得：m|(x-a),n|(x-a)</p>
+<p>而m,n互素，两个互素的正整数的最小公倍数为它们的乘积，所以有：mn|(x-a), 即$x\equiv a \pmod {mn}$</p>
+<h2 id="5-设p-q是两个不同的素数，请证明-p-q-1-q-p-1-equiv-1-pmod-pq"><a href="#5-设p-q是两个不同的素数，请证明-p-q-1-q-p-1-equiv-1-pmod-pq" class="headerlink" title="5.设p,q是两个不同的素数，请证明   $p^{q-1}+q^{p-1}\equiv 1\pmod {pq}$"></a>5.设p,q是两个不同的素数，请证明   $p^{q-1}+q^{p-1}\equiv 1\pmod {pq}$</h2><p>p,q是两个不同的素数，由费尔马小定理可得 </p>
+<script type="math/tex; mode=display">
+\begin{cases}p^{q-1}\equiv 1\pmod q\\q^{p-1}\equiv 1 \pmod p\\p^{q-1}\equiv 0\pmod p\\q^{p-1}\equiv 0 \pmod q\end{cases}</script><p>则可令$x=p^{q-1}+q^{p-1}$</p>
+<script type="math/tex; mode=display">
+\begin{cases} x\equiv 1\pmod{p}\\x\equiv1\pmod{q}\end{cases}</script><p>由第四题证明 $x\equiv 1\pmod{pq}$</p>
+<p>因此   $p^{q-1}+q^{p-1}\equiv 1\pmod {pq}$</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="https://lyhcq.gitee.io/blog/2021/12/02/CINTA-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -292,7 +440,7 @@ a^{2020} \bmod p= a^{22*19+18} \bmod p= a^{22*19}+a^{18}\bmod p
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

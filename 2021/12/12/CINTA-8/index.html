@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lyhcq.gitee.io","root":"/blog/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="CINTA作业八1.手动计算 $2000^{2019}(\bmod 221)$$2000^{2019}&#x3D;(2000\bmod 221)^{2019} \bmod 221&#x3D;11^{2019}\bmod 221$ 设221&#x3D;13$\times$17,而2000$\leftrightarrow$(11,11) 由第一同构定理可知  (11,11)^{2019}&#x3D;((11^{2019}\bmod 13),">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lycq&#39;s blog">
+<meta property="og:url" content="https://lyhcq.gitee.io/blog/2021/12/12/CINTA-8/index.html">
+<meta property="og:site_name" content="lycq&#39;s blog">
+<meta property="og:description" content="CINTA作业八1.手动计算 $2000^{2019}(\bmod 221)$$2000^{2019}&#x3D;(2000\bmod 221)^{2019} \bmod 221&#x3D;11^{2019}\bmod 221$ 设221&#x3D;13$\times$17,而2000$\leftrightarrow$(11,11) 由第一同构定理可知  (11,11)^{2019}&#x3D;((11^{2019}\bmod 13),">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-12-12T12:56:13.553Z">
+<meta property="article:modified_time" content="2021-12-12T12:56:22.359Z">
+<meta property="article:author" content="lycq">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://lyhcq.gitee.io/blog/2021/12/12/CINTA-8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title> | lycq's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">lycq's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">吃货的牛肉火锅</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lyhcq.gitee.io/blog/2021/12/12/CINTA-8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="lycq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lycq's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-12 20:56:13 / Modified: 20:56:22" itemprop="dateCreated datePublished" datetime="2021-12-12T20:56:13+08:00">2021-12-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="CINTA作业八"><a href="#CINTA作业八" class="headerlink" title="CINTA作业八"></a>CINTA作业八</h1><h2 id="1-手动计算-2000-2019-bmod-221"><a href="#1-手动计算-2000-2019-bmod-221" class="headerlink" title="1.手动计算 $2000^{2019}(\bmod 221)$"></a>1.手动计算 $2000^{2019}(\bmod 221)$</h2><p>$2000^{2019}=(2000\bmod 221)^{2019} \bmod 221=11^{2019}\bmod 221$</p>
+<p>设221=13$\times$17,而2000$\leftrightarrow$(11,11)</p>
+<p>由第一同构定理可知</p>
+<script type="math/tex; mode=display">
+(11,11)^{2019}=((11^{2019}\bmod 13),(11^{2019}\bmod 17))=((11^{12\times168+3}\bmod 13),(11^{16\times126+3}\bmod17))</script><p>根据费尔马小定理可得</p>
+<script type="math/tex; mode=display">
+(11,11)^{2019}=((11^3\bmod13),(11^3\bmod 17))=(5,5)</script><p>且 (5,5)$\leftrightarrow$5,则该式结果为5</p>
+<h2 id="2-运用CRT求解"><a href="#2-运用CRT求解" class="headerlink" title="2.运用CRT求解"></a>2.运用CRT求解</h2><script type="math/tex; mode=display">
+\begin{cases} x\equiv8\bmod11\\ x\equiv3\bmod19 \end{cases} \tag{1}</script><p>记 a=8, b=3, p=11, q=19 和 n=pq=209 ;</p>
+<p>使用egcd算法求解 $p^{-1}$ 和 $q^{-1}$  ,他们分别使得   $pp^{-1}\equiv1\pmod q $,   $qq^{-1}\equiv1\pmod p$ ;</p>
+<p>得到$p^{-1}=7\pmod{19}$   ,    $q^{-1}=7\pmod{11}$ ;</p>
+<p>令$y\equiv aqq^{-1}+bpp^{-1}\pmod n$</p>
+<p>则y=41;</p>
+<p>所以该式的解为4</p>
+<h2 id="3-运用CRT求解"><a href="#3-运用CRT求解" class="headerlink" title="3.运用CRT求解"></a>3.运用CRT求解</h2><script type="math/tex; mode=display">
+\begin{cases} x\equiv1\pmod 5\\ x\equiv2\pmod7\\ x\equiv3\pmod9\\x\equiv4\pmod{11}\end{cases}</script><p>令 $a_1=1,a_2=2,a_3=3,a_4=4,m_1=5,m_2=7,m_3=9,m_4=11$</p>
+<p>$M=m_1\times m_2\times m_3\times m_4=3465$</p>
+<p>$b<em>1=m_2\times m_3\times m_4=693$;  存在$b</em>{-1}=2$ 使得$bb_{-1}\equiv 1 \pmod {m_1}$</p>
+<p>$b_2=495$;  $b_2^{-1}\equiv 3\pmod 7$</p>
+<p>$b_3=385;b_3^{-1}\equiv 4\pmod 9$</p>
+<p>$b_4=315;b_4^{-1}\equiv 8\pmod {11}$</p>
+<p>则由中国剩余定理可得：</p>
+<p>$x=a_1b_1b_1^{-1}+a_2b_2b_2^{-1}+a_3b_3b_3^{-1}+a_4b_4b_4^{-1} \pmod {3456}=1731$</p>
+<h2 id="4-设m-n为互素的正整数，a-gt-0为一个正整数，如果"><a href="#4-设m-n为互素的正整数，a-gt-0为一个正整数，如果" class="headerlink" title="4.设m,n为互素的正整数，a&gt;0为一个正整数，如果"></a>4.设m,n为互素的正整数，a&gt;0为一个正整数，如果</h2><script type="math/tex; mode=display">
+x\equiv a\pmod m</script><script type="math/tex; mode=display">
+x\equiv a\pmod n</script><h2 id="x模mn等于什么，为什么？"><a href="#x模mn等于什么，为什么？" class="headerlink" title="x模mn等于什么，为什么？"></a>x模mn等于什么，为什么？</h2><p>由题目条件可得：m|(x-a),n|(x-a)</p>
+<p>而m,n互素，两个互素的正整数的最小公倍数为它们的乘积，所以有：mn|(x-a), 即$x\equiv a \pmod {mn}$</p>
+<h2 id="5-设p-q是两个不同的素数，请证明-p-q-1-q-p-1-equiv-1-pmod-pq"><a href="#5-设p-q是两个不同的素数，请证明-p-q-1-q-p-1-equiv-1-pmod-pq" class="headerlink" title="5.设p,q是两个不同的素数，请证明   $p^{q-1}+q^{p-1}\equiv 1\pmod {pq}$"></a>5.设p,q是两个不同的素数，请证明   $p^{q-1}+q^{p-1}\equiv 1\pmod {pq}$</h2><p>p,q是两个不同的素数，由费尔马小定理可得 </p>
+<script type="math/tex; mode=display">
+\begin{cases}p^{q-1}\equiv 1\pmod q\\q^{p-1}\equiv 1 \pmod p\\p^{q-1}\equiv 0\pmod p\\q^{p-1}\equiv 0 \pmod q\end{cases}</script><p>则可令$x=p^{q-1}+q^{p-1}$</p>
+<script type="math/tex; mode=display">
+\begin{cases} x\equiv 1\pmod{p}\\x\equiv1\pmod{q}\end{cases}</script><p>由第四题证明 $x\equiv 1\pmod{pq}$</p>
+<p>因此   $p^{q-1}+q^{p-1}\equiv 1\pmod {pq}$</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2021/12/02/CINTA-3/" rel="prev" title="CINTA_3">
+      <i class="fa fa-chevron-left"></i> CINTA_3
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2021/12/12/CINTA-8-1/" rel="next" title="CINTA_8">
+      CINTA_8 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CINTA%E4%BD%9C%E4%B8%9A%E5%85%AB"><span class="nav-number">1.</span> <span class="nav-text">CINTA作业八</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%89%8B%E5%8A%A8%E8%AE%A1%E7%AE%97-2000-2019-bmod-221"><span class="nav-number">1.1.</span> <span class="nav-text">1.手动计算 $2000^{2019}(\bmod 221)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%BF%90%E7%94%A8CRT%E6%B1%82%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">2.运用CRT求解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%BF%90%E7%94%A8CRT%E6%B1%82%E8%A7%A3"><span class="nav-number">1.3.</span> <span class="nav-text">3.运用CRT求解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%AE%BEm-n%E4%B8%BA%E4%BA%92%E7%B4%A0%E7%9A%84%E6%AD%A3%E6%95%B4%E6%95%B0%EF%BC%8Ca-gt-0%E4%B8%BA%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0%EF%BC%8C%E5%A6%82%E6%9E%9C"><span class="nav-number">1.4.</span> <span class="nav-text">4.设m,n为互素的正整数，a&gt;0为一个正整数，如果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x%E6%A8%A1mn%E7%AD%89%E4%BA%8E%E4%BB%80%E4%B9%88%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.5.</span> <span class="nav-text">x模mn等于什么，为什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%AE%BEp-q%E6%98%AF%E4%B8%A4%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E7%B4%A0%E6%95%B0%EF%BC%8C%E8%AF%B7%E8%AF%81%E6%98%8E-p-q-1-q-p-1-equiv-1-pmod-pq"><span class="nav-number">1.6.</span> <span class="nav-text">5.设p,q是两个不同的素数，请证明   $p^{q-1}+q^{p-1}\equiv 1\pmod {pq}$</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">lycq</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lycq</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/muse.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
