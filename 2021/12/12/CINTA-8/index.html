@@ -22,13 +22,13 @@
 
   <meta name="description" content="CINTA作业八1.手动计算 $2000^{2019}(\bmod 221)$$2000^{2019}&#x3D;(2000\bmod 221)^{2019} \bmod 221&#x3D;11^{2019}\bmod 221$ 设221&#x3D;13$\times$17,而2000$\leftrightarrow$(11,11) 由第一同构定理可知  (11,11)^{2019}&#x3D;((11^{2019}\bmod 13),">
 <meta property="og:type" content="article">
-<meta property="og:title" content="lycq&#39;s blog">
+<meta property="og:title" content="CINTA_8">
 <meta property="og:url" content="https://lyhcq.gitee.io/blog/2021/12/12/CINTA-8/index.html">
 <meta property="og:site_name" content="lycq&#39;s blog">
 <meta property="og:description" content="CINTA作业八1.手动计算 $2000^{2019}(\bmod 221)$$2000^{2019}&#x3D;(2000\bmod 221)^{2019} \bmod 221&#x3D;11^{2019}\bmod 221$ 设221&#x3D;13$\times$17,而2000$\leftrightarrow$(11,11) 由第一同构定理可知  (11,11)^{2019}&#x3D;((11^{2019}\bmod 13),">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-12-12T12:56:13.553Z">
-<meta property="article:modified_time" content="2021-12-12T12:56:22.359Z">
+<meta property="article:published_time" content="2021-12-12T12:56:48.000Z">
+<meta property="article:modified_time" content="2021-12-12T13:59:18.128Z">
 <meta property="article:author" content="lycq">
 <meta name="twitter:card" content="summary">
 
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title> | lycq's blog</title>
+  <title>CINTA_8 | lycq's blog</title>
   
 
 
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          CINTA_8
         </h1>
 
         <div class="post-meta">
@@ -175,7 +175,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-12-12 20:56:13 / Modified: 20:56:22" itemprop="dateCreated datePublished" datetime="2021-12-12T20:56:13+08:00">2021-12-12</time>
+              <time title="Created: 2021-12-12 20:56:48 / Modified: 21:59:18" itemprop="dateCreated datePublished" datetime="2021-12-12T20:56:48+08:00">2021-12-12</time>
             </span>
 
           
@@ -240,10 +240,7 @@ x\equiv a\pmod n</script><h2 id="x模mn等于什么，为什么？"><a href="#x�
     <a href="/blog/2021/12/02/CINTA-3/" rel="prev" title="CINTA_3">
       <i class="fa fa-chevron-left"></i> CINTA_3
     </a></div>
-      <div class="post-nav-item">
-    <a href="/blog/2021/12/12/CINTA-8-1/" rel="next" title="CINTA_8">
-      CINTA_8 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -316,7 +313,7 @@ x\equiv a\pmod n</script><h2 id="x模mn等于什么，为什么？"><a href="#x�
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -403,6 +400,59 @@ x\equiv a\pmod n</script><h2 id="x模mn等于什么，为什么？"><a href="#x�
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
