@@ -412,6 +412,7 @@ x\equiv a\pmod n</script><h2 id="x模mn等于什么，为什么？"><a href="#x�
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
       loader: {
+          load: ['[tex]/mhchem'],
         source: {
           '[tex]/amsCd': '[tex]/amscd',
           '[tex]/AMScd': '[tex]/amscd'
@@ -419,6 +420,7 @@ x\equiv a\pmod n</script><h2 id="x模mn等于什么，为什么？"><a href="#x�
       },
       tex: {
         inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
         tags: 'ams'
       },
       options: {
