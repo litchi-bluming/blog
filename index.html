@@ -146,6 +146,102 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lyhcq.gitee.io/blog/2021/12/21/CINTA-9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="lycq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lycq's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2021/12/21/CINTA-9/" class="post-title-link" itemprop="url">CINTA-9</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-12-21 21:08:30 / Modified: 21:13:26" itemprop="dateCreated datePublished" datetime="2021-12-21T21:08:30+08:00">2021-12-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="CINTA作业九"><a href="#CINTA作业九" class="headerlink" title="CINTA作业九"></a>CINTA作业九</h1><h2 id="1-证明命题11-2"><a href="#1-证明命题11-2" class="headerlink" title="1.证明命题11.2"></a>1.证明命题11.2</h2><h3 id="命题11-2：-用QR-p表示模p的QR集合，QR-p在乘法上成群"><a href="#命题11-2：-用QR-p表示模p的QR集合，QR-p在乘法上成群" class="headerlink" title="命题11.2：$用QR_p表示模p的QR集合，QR_p在乘法上成群$"></a>命题11.2：$用QR_p表示模p的QR集合，QR_p在乘法上成群$</h3><h3 id="封闭性："><a href="#封闭性：" class="headerlink" title="封闭性："></a>封闭性：</h3><p>由命题11.3可知两个模p的QR相乘得到一个QR，记为：$QR\times QR=QR$;</p>
+<h3 id="结合律："><a href="#结合律：" class="headerlink" title="结合律："></a>结合律：</h3><p>任取</p>
+<p>$a_1,a_2,a_3\in QR_p,  (a_1\times a_2)*a_3\pmod p=(x_1^2x_2^2)x_3^2\pmod p=x_1^2(x_2^2x_3^2)\pmod p=a_1\times (a_2\times a_3)$</p>
+<h3 id="单位元："><a href="#单位元：" class="headerlink" title="单位元："></a>单位元：</h3><p>$1^2\equiv 1\pmod p$</p>
+<h3 id="逆元："><a href="#逆元：" class="headerlink" title="逆元："></a>逆元：</h3><p>设,$x,x^{-1}\in Z_p^*$,存在a,b,满足$x\equiv a\pmod p,x^{-1}\equiv b\pmod p$</p>
+<p>$ab\pmod p=x\times x^{-1}\pmod p=e$,存在逆元</p>
+<h2 id="2-使用群论的方法证明定理11-1"><a href="#2-使用群论的方法证明定理11-1" class="headerlink" title="2.使用群论的方法证明定理11.1"></a>2.使用群论的方法证明定理11.1</h2><p>定理11.1：设p为奇素数，刚刚好存在(p-1)/2个模p的QR,和(p-1)/2 个模p的QNR</p>
+<p>证明：对$Z_p^*$中所有的数做平方，映射到模p的QR。由命题11.1可知恰好有两个不同余的整数映射到一个QR</p>
+<p>现在有p-1个数，则恰好有（p-1)/2个模p的QR,剩下的（p-1）/2个整数就是模p的QNR</p>
+<h2 id="3-定义映射："><a href="#3-定义映射：" class="headerlink" title="3.定义映射："></a>3.定义映射：</h2><script type="math/tex; mode=display">
+\psi:Z_p^{*}\rightarrow {\pm 1}为\psi (a)=(\frac{a}{p}),\forall a \in Z_p^{*}</script><p>请证明这是一个满同态</p>
+<p>$\psi (a\cdot b)==(\frac{ab}{p})=(\frac{a}{p})(\frac{b}{p})=\psi(a)\circ\psi(b)$</p>
+<p>$\therefore \psi$是一种同态</p>
+<p>若a是QR，则$\psi(a)=1$</p>
+<p>若a是QNR,则$\psi(a)=-1$</p>
+<p>故$\psi$为满射，且为满同态</p>
+<h2 id="4-设p是奇素数，请证明-Z-p-的所有生成元都是模p的二次非剩余"><a href="#4-设p是奇素数，请证明-Z-p-的所有生成元都是模p的二次非剩余" class="headerlink" title="4.设p是奇素数，请证明$Z_p^{*}$ 的所有生成元都是模p的二次非剩余"></a>4.设p是奇素数，请证明$Z_p^{*}$ 的所有生成元都是模p的二次非剩余</h2><p>假设存在$Z_p^*$的生成元a是模p的二次剩余,则$a^{i}\in QR对\forall i\in Z都成立$</p>
+<p>$a^i$无法生成QNR，则a不是$Z_p^*$的生成元</p>
+<h2 id="5-证明命题11-4"><a href="#5-证明命题11-4" class="headerlink" title="5.证明命题11.4"></a>5.证明命题11.4</h2><p><img src="https://img-blog.csdnimg.cn/8a24f6254b90447a9821a89995ec170e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAfuiOq8K36L6c6LSffg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="lcqshabi"></p>
+<p>证明：</p>
+<ol>
+<li><p>当a为QR,有$a\equiv b\equiv x^2\pmod p,此时b为QR，(\frac{a}{p})=(\frac{b}{p})=1$</p>
+<p>当a为QNR,b也为QNR,$(\frac{a}{p})=(\frac{b}{p})=-1$</p>
+<p>综上：$(\frac{a}{p})=(\frac{b}{p})$</p>
+</li>
+<li><p>当a,b为QR,ab为QR,有$(\frac{a}{p})(\frac{b}{p})=1\cdot 1=1=(\frac{ab}{p})$</p>
+<p>当a,b为QNR,ab为QR,有$(\frac{a}{p})(\frac{b}{p})=(-1)\cdot (-1)=1=(\frac{ab}{p})$</p>
+<p>当a,b中有一个为QR，另一个为QNR，ab为QNR,有$(\frac{a}{p})(\frac{b}{p})=\cdot (-1)=-1=(\frac{ab}{p})$</p>
+</li>
+<li><p>当a为QR,$a^2$也为QR,则$(\frac{a}{p})(\frac{a}{p})=1=(\frac{a^2}{p})$</p>
+</li>
+</ol>
+<p>​       当a为QNR,$a^2$为QR,则$(\frac{a}{p})(\frac{a}{p})=(-1)\cdot(-1)=1=(\frac{a^2}{p})$</p>
+<h2 id="6-给出推论11-1-的完整证明"><a href="#6-给出推论11-1-的完整证明" class="headerlink" title="6.给出推论11.1 的完整证明"></a>6.给出推论11.1 的完整证明</h2><p><img src="https://s2.loli.net/2021/12/21/8qgsK5IaYFEpRAl.jpg" alt="微信图片_20211221205459.jpg"></p>
+<p>若$p\equiv 1\pmod 4$,存在$k\in Z$,使得p=4k+1,欧拉准则：</p>
+<script type="math/tex; mode=display">
+(\frac{-1}{p})=(-1)^{(p-1)/2}=(-1)^{(4k+1-1)/2}=1\pmod p=1</script><p>若$p\equiv -1\pmod 4,存在k\in Z,使得p=4k+3,欧拉准则：$</p>
+<script type="math/tex; mode=display">
+(\frac{-1}{p})=(-1)^{(p-1)/2}=(-1)^{(4k+3-1)/2}=-1\pmod p=-1</script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="https://lyhcq.gitee.io/blog/2021/12/16/CINTA-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -548,7 +644,7 @@ a^{2020} \bmod p= a^{22*19+18} \bmod p= a^{22*19}+a^{18}\bmod p
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
